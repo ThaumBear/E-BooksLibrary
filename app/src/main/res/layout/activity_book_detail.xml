@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01_2"
+    tools:context=".classes.Activities.BookDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:background="@drawable/shape_toolbar02_2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="20sp">
+
+        <!--Кнопка назад-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back_white"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <!--Заголовок-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-condensed"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="@string/book_detail"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+    </RelativeLayout>
+
+    <!--Опції-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bookOptionsLl"
+        android:layout_below="@id/toolbarRl"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/pdfRl"
+                    android:layout_width="110dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/grey">
+
+                    <!--PDF-->
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!--Прогрес завантаження-->
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="100dp"
+                        android:layout_height="142dp"
+                        android:indeterminateTint="@color/salmon" />
+                </RelativeLayout>
+
+                <!--Назва книги-->
+                <TextView
+                    android:id="@+id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pdfRl"
+                    android:text="@string/book_title" />
+
+                <!--Таблиця даних-->
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:layout_toEndOf="@id/pdfRl">
+
+                    <!--Рядок категорії-->
+                    <TableRow>
+                        <!--Категорія-->
+                        <TextView
+                            android:id="@+id/categoryLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/book_category" />
+
+                        <!--Поле значення категорії-->
+                        <TextView
+                            android:id="@+id/categoryTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+                    <!--Рядок дати-->
+                    <TableRow android:layout_marginTop="5dp">
+                        <!--Дата-->
+                        <TextView
+                            android:id="@+id/dateLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/date" />
+
+                        <!--Поле значення дати-->
+                        <TextView
+                            android:id="@+id/dateTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+                    <!--Рядок розміру-->
+                    <TableRow android:layout_marginTop="5dp">
+                        <!--Розмір-->
+                        <TextView
+                            android:id="@+id/sizeLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/size" />
+
+                        <!--Поле значення розміру-->
+                        <TextView
+                            android:id="@+id/sizeTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+                    <!--Рядок переглядів-->
+                    <TableRow android:layout_marginTop="5dp">
+                        <!--Перегляди-->
+                        <TextView
+                            android:id="@+id/viewsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/views" />
+
+                        <!--Поле значення переглядів-->
+                        <TextView
+                            android:id="@+id/viewsTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+                    <!--Рядок завантажень-->
+                    <TableRow android:layout_marginTop="5dp">
+                        <!--Завантаження-->
+                        <TextView
+                            android:id="@+id/downloadsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/downloads" />
+
+                        <!--Поле значення завантажень-->
+                        <TextView
+                            android:id="@+id/downloadsTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+                    <!--Рядок сторінок-->
+                    <TableRow android:layout_marginTop="5dp">
+                        <!--Кількість сторінок-->
+                        <TextView
+                            android:id="@+id/pagesLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/pages" />
+
+                        <!--Поле значення сторінок-->
+                        <TextView
+                            android:id="@+id/pagesTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/undefined" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <!--Підзаголовок-->
+            <TextView
+                android:id="@+id/subTitleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/book_description"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <!--Опис книги-->
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/book_description"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bookOptionsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="20sp">
+
+        <!--Кнопка для перегляду PDF файлу-->
+        <android.widget.Button
+            android:id="@+id/readBookBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/salmon"
+            android:drawableTop="@drawable/read_white"
+            android:shadowColor="@color/ash_grey"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:text="@string/read"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <!--Кнопка для завантаження PDF файлу-->
+        <android.widget.Button
+            android:id="@+id/downloadBookBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:background="@color/salmon"
+            android:drawableTop="@drawable/download_white"
+            android:shadowColor="@color/ash_grey"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <!--Кнопка для завантаження PDF файлу-->
+        <android.widget.Button
+            android:id="@+id/favoriteBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:background="@color/salmon"
+            android:drawableTop="@drawable/favorite_white"
+            android:shadowColor="@color/ash_grey"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/favorite"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+</RelativeLayout>

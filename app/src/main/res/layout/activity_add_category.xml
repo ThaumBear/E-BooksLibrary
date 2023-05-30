@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01_2"
+    tools:context=".classes.Activities.AddCategoryActivity">
+
+    <!--Макет додавання категорії-->
+
+    <!--Панель-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/shape_toolbar01_2">
+
+        <!--Кнопка назад-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back_gray"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <!--Лого-->
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/logo_2"
+            tools:ignore="ContentDescription" />
+
+        <!--Заголовок-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_new_book_category"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:scrollbarSize="20sp"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="2"
+            android:shadowDy="6"
+            android:shadowRadius="3"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/categoryTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="240dp"
+        app:hintEnabled="false">
+
+        <!--Категорія-->
+        <EditText
+            android:id="@+id/categoryEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text01_2"
+            android:drawableStart="@drawable/category_gray"
+            android:drawablePadding="10dp"
+            android:hint="@string/category_title"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!--Кнопка додавання-->
+        <android.widget.Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTil"
+            android:background="@drawable/shape_button01_2"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            tools:ignore="VisualLintButtonSize"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

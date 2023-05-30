@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01_2"
+    tools:context=".classes.Activities.ProfileActivity">
+
+    <!--Задній фон-->
+    <View
+        android:id="@+id/backProfileV"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/back02_2" />
+
+    <!--Панель-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02_2"
+        android:elevation="15dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+
+        <!--Заголовок-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:scrollbarSize="20sp"
+            android:shadowColor="@color/dark_grey"
+            android:shadowDx="2"
+            android:shadowDy="6"
+            android:shadowRadius="3"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <!--Кнопка редагування профілю-->
+        <ImageButton
+            android:id="@+id/profileEditBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/edit_white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/shape_rect01"/>
+
+    <!--Фото профілю-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIv"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/person_gray"
+        app:shapeAppearanceOverlay="@style/styleRoundedCornersImage"/>
+
+    <!--Ім'я-->
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!--Пошта-->
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:layout_centerHorizontal="true"
+        android:text="@string/email_example"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/detailsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/emailTv"
+        android:layout_marginTop="8dp">
+
+        <!--Роль користувача-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textColor = "@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/accountTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/undefined"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+
+        <!--Дата реєстрації-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/member"
+                android:textColor = "@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/memberDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/undefined"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+
+        <!--Улюблені книги-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorites"
+                android:textColor = "@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/favoriteBookCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/undefined"
+                android:textColor = "@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--горизонтальна лінія-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/detailsLl"
+        android:layout_marginTop="5dp"
+        android:background="@color/light_grey"/>
+
+    <!--Заголовк-->
+    <TextView
+        android:id="@+id/favoritesLabelTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/favorites_list"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <!--Улюблені книги-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritesRv"
+        android:layout_below="@id/favoritesLabelTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_book_favorite"/>
+
+</RelativeLayout>

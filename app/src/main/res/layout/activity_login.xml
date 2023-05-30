@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".classes.Activities.LoginActivity"
+    android:clipToPadding="false">
+
+    <!--Макет авторизації-->
+
+    <!--Верхня панель-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <!--Кнопка "назад"-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:src="@drawable/back_gray"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <!--Лого-->
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/logo"/>
+
+        <!--Заголовок-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/login_to_your_account"
+            android:textColor="@color/teal_700"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:shadowColor="@color/ash_grey"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="2"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="30dp"
+        android:scrollbarSize="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Пошта-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/emailEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edit_text01"
+                    android:drawableStart="@drawable/email_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="15sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Пароль-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailTil"
+                android:layout_marginTop="5dp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:background="@drawable/shape_edit_text01"
+                    android:drawableStart="@drawable/lock_gray"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Відновлення паролю-->
+            <TextView
+                android:id="@+id/forgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordTil"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="@string/forgot_password"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!--Авторизація-->
+            <android.widget.Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/forgotPass"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_button01"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/ash_grey"
+                android:shadowDx="0"
+                android:shadowDy="4"
+                android:shadowRadius="2"
+                android:layout_margin="10sp"
+                android:scrollbarSize="20sp"
+                tools:ignore="VisualLintButtonSize" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--Реєстрація-->
+    <TextView
+        android:id="@+id/noAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="@string/new_to_book_app_create_an_account"
+        android:textAlignment="center"
+        android:shadowColor="@color/ash_grey"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="2"/>
+
+</RelativeLayout>

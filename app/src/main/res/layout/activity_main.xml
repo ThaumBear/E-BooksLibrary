@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    android:padding="20dp"
+    tools:context=".classes.Activities.MainActivity">
+
+    <!--Макет головного екрану-->
+
+    <!--Лого-->
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo" />
+
+    <!--Заголовок-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/welcome_to_book_app"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="30sp"
+        android:shadowColor="@color/ash_grey"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="2"/>
+
+    <!--Авторизація-->
+    <android.widget.Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/skipBtn"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_button01"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/ash_grey"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        tools:ignore="VisualLintButtonSize" />
+
+    <!--Продовження без авторизації-->
+    <android.widget.Button
+        android:id="@+id/skipBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/continue_without_login"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:shadowColor="@color/dark_grey"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:background="@drawable/shape_button02"
+        tools:ignore="VisualLintButtonSize" />
+</RelativeLayout>
