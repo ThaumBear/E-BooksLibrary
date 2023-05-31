@@ -45,12 +45,12 @@
 Улюблені книги відображаються у профілі користувача.
 ## Скріншоти демонстрації роботи додатка:
 ### Головний екран/Реєстрація  
-![Демонстрація1](https://docs.google.com/uc?id=13lLF3TxiZZ-XW5voYYrsCsGXJnyKYiEa)  
+![Демонстрація1](https://github.com/ThaumBear/E-BooksLibrary/blob/main/screenshots/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%B8%D0%B41.png)  
 ### Авторизація/Зміна паролю  
-![Демонстрація2](https://docs.google.com/uc?id=1V3Mw43_Ob4XILqBRzW85JL4ngJw3UC_8)  
+![Демонстрація2](https://github.com/ThaumBear/E-BooksLibrary/blob/main/screenshots/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%B8%D0%B42.png) 
 ### Список книг/Перегляд даних про книгу/Перегляд PDF-файлу книги  
-![Демонстрація3](https://docs.google.com/uc?id=1TXeyAsHBH-4r4P8O7LzVHUmICizFxTP3)  
+![Демонстрація3](https://github.com/ThaumBear/E-BooksLibrary/blob/main/screenshots/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%B8%D0%B43.png)  
 ### Профіль користувача/Редагування профілю  
-![Демонстрація4](https://docs.google.com/uc?id=1faYBhhd4x_foWcTQZKl4wegeW96ThgPv)  
+![Демонстрація4](https://github.com/ThaumBear/E-BooksLibrary/blob/main/screenshots/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%B8%D0%B44.png)  
 ### Пошук категорії/Обрання дії/Редагування категорії  
-![Демонстрація5](https://docs.google.com/uc?id=1ENnHHpQkImfkeEtQlN8XP5tT1t5m-Pek)  
+![Демонстрація5](https://github.com/ThaumBear/E-BooksLibrary/blob/main/screenshots/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%B8%D0%B45.png)  
