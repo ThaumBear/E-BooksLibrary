@@ -47,7 +47,7 @@
 ### Головний екран/Реєстрація
 ![Демонстрація1](https://docs.google.com/uc?id=13lLF3TxiZZ-XW5voYYrsCsGXJnyKYiEa)
 ### Авторизація/Зміна паролю
-![Демонстрація2](https://docs.google.com/uc?id=1qrVVffWm_g_P-7upcwrDhiOJFxFiOmRj)
+![Демонстрація2](https://docs.google.com/uc?id=1V3Mw43_Ob4XILqBRzW85JL4ngJw3UC_8)
 ### Список книг/Перегляд даних про книгу/Перегляд PDF-файлу книги
 ![Демонстрація3](https://docs.google.com/uc?id=1TXeyAsHBH-4r4P8O7LzVHUmICizFxTP3)
 ### Профіль користувача/Редагування профілю
