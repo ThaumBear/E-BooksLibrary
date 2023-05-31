@@ -44,8 +44,13 @@
 - Додавання/видалення книги до/зі списку улюблених книг;
 Улюблені книги відображаються у профілі користувача.
 ## Скріншоти демонстрації роботи додатка:
-### Головний екран/Реєстрація ![Демонстрація1](https://docs.google.com/uc?id=13lLF3TxiZZ-XW5voYYrsCsGXJnyKYiEa)  
-### Авторизація/Зміна паролю  ![Демонстрація2](https://docs.google.com/uc?id=1V3Mw43_Ob4XILqBRzW85JL4ngJw3UC_8)  
-### Список книг/Перегляд даних про книгу/Перегляд PDF-файлу книги  ![Демонстрація3](https://docs.google.com/uc?id=1TXeyAsHBH-4r4P8O7LzVHUmICizFxTP3)  
-### Профіль користувача/Редагування профілю  ![Демонстрація4](https://docs.google.com/uc?id=1faYBhhd4x_foWcTQZKl4wegeW96ThgPv)  
-### Пошук категорії/Обрання дії/Редагування категорії  ![Демонстрація5](https://docs.google.com/uc?id=1ENnHHpQkImfkeEtQlN8XP5tT1t5m-Pek)  
+### Головний екран/Реєстрація  
+![Демонстрація1](https://docs.google.com/uc?id=13lLF3TxiZZ-XW5voYYrsCsGXJnyKYiEa)  
+### Авторизація/Зміна паролю  
+![Демонстрація2](https://docs.google.com/uc?id=1V3Mw43_Ob4XILqBRzW85JL4ngJw3UC_8)  
+### Список книг/Перегляд даних про книгу/Перегляд PDF-файлу книги  
+![Демонстрація3](https://docs.google.com/uc?id=1TXeyAsHBH-4r4P8O7LzVHUmICizFxTP3)  
+### Профіль користувача/Редагування профілю  
+![Демонстрація4](https://docs.google.com/uc?id=1faYBhhd4x_foWcTQZKl4wegeW96ThgPv)  
+### Пошук категорії/Обрання дії/Редагування категорії  
+![Демонстрація5](https://docs.google.com/uc?id=1ENnHHpQkImfkeEtQlN8XP5tT1t5m-Pek)  
